@@ -170,12 +170,18 @@ $form['description'] = array(
   );
   
   
-    $form['gpareq'] = array(
-    '#type' => 'textfield',
-	'#name' => 'gpareq',
-	'#maxlength'=> 5,
-	'#size'=> 10,
-    '#value' => t('GPA Requirement')
+	$form['gpareq'] = array(
+	'#type' => 'select',
+	'#title'=> t('GPA Requirement'),
+	'#options' => array(
+	  0 => t('None'),
+	  1 => t('3+'),
+	  2 => t('3.25+'),
+	  3 => t('3.50+'),
+	  4 => t('3.75+'),
+	),
+	'#default_value' => t('None'),
+	'#description' => t('The GPA required to participate'),
   );
   
   
